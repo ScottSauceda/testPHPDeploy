@@ -112,7 +112,12 @@ http://localhost
 Our web page is a little boring as it only prints the current date, but this is all we need to get started!
 
 
+clearDB for tutorialdeploy
+mysql://b336b8c7b07080:5485e71f@us-cdbr-east-05.cleardb.net/heroku_b0aa10459393454?reconnect=true
 
+Username: b336b8c7b07080
+Password: 5485e71f
+Host: us-cdbr-east-05.cleardb.net
 
 ### \ ### / ### *     ### \ ### / ### *     ### \ ### / ### *     ### \ ### / ### *     ### \ ### / ### *     ### \ ### / ### *
 
