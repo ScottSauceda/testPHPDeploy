@@ -12,7 +12,7 @@ $result = mysqli_query($conn, $query);
 
 $query2 = "SELECT * FROM members ORDER BY joinTime";
 
-$result2 = mysqli_query($conn, $query);
+$result2 = mysqli_query($conn, $query2);
 
 
 
