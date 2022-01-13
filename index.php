@@ -10,6 +10,10 @@ $query = "SELECT * FROM blogs ORDER BY blogDateTime";
 
 $result = mysqli_query($conn, $query);
 
+$query2 = "SELECT * FROM members ORDER BY joinTime";
+
+$result2 = mysqli_query($conn, $query);
+
 
 
 ?>
@@ -32,8 +36,19 @@ $result = mysqli_query($conn, $query);
     <div>
         <?php
             while($row=mysqli_fetch_array($result)) {
-                    echo '<div>' . $row['blogTitle'] . ', ' . $row['blogEntry'] . ' (' . $row['mbrID'] . ')</div>';
+                    echo '<p>' . $row['blogTitle'] . ' : ' . $row['blogEntry'] . ' : ' . $row['mbrID'] . '</p>';
                 }
+        ?>
+    </div>
+
+    <br>
+    <br>
+    
+    <div>
+        <?php
+            while($row2=mysqli_fetch_array($result2)) {
+                echo '<p>' . $row['IDmbr'] . ' : ' . $row['lastName'] . ' : ' . $row['firstName'] . '  : ' . $row['user'] . '</p>';
+            }
         ?>
     </div>
 </body>
