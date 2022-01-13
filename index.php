@@ -1,5 +1,5 @@
 <?php
-    require_once("conn/connSocial.php")
+    require_once("conn/connSocial.php");
 
 
 $firstName = $_GET['firstName'];
