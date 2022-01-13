@@ -2,19 +2,19 @@
     require_once("conn/connSocial.php");
 
 
-$firstName = $_GET['firstName'];
+// $firstName = $_GET['firstName'];
 
-
-
+// posts
 $query = "SELECT * FROM blogs ORDER BY blogDateTime";
-
 $result = mysqli_query($conn, $query);
 
+// members
 $query2 = "SELECT * FROM members ORDER BY joinTime";
-
 $result2 = mysqli_query($conn, $query2);
 
-
+// members
+$query3 = "SELECT * FROM comments ORDER BY commentTime";
+$result3 = mysqli_query($conn, $query3);
 
 ?>
 
@@ -36,7 +36,7 @@ $result2 = mysqli_query($conn, $query2);
     <div>
         <?php
             while($row=mysqli_fetch_array($result)) {
-                    echo '<p>' . $row['blogTitle'] . ' : ' . $row['blogEntry'] . ' : ' . $row['mbrID'] . '</p>';
+                    echo '<p>'. $row['IDblog'] . ' : ' . $row['blogTitle'] . ' : ' . $row['blogEntry'] . ' : ' . $row['mbrID'] . '</p>';
                 }
         ?>
     </div>
@@ -48,6 +48,17 @@ $result2 = mysqli_query($conn, $query2);
         <?php
             while($row2=mysqli_fetch_array($result2)) {
                 echo '<p>' . $row2['IDmbr'] . ' : ' . $row2['lastName'] . ' : ' . $row2['firstName'] . '  : ' . $row2['user'] . '</p>';
+            }
+        ?>
+    </div>
+
+    <br>
+    <br>
+    
+    <div>
+        <?php
+            while($row3=mysqli_fetch_array($result3)) {
+                echo '<p>' . $row3['IDcomment'] . ' : ' . $row3['comment'] . ' : thumbsUp ' . $row3['thumbsUp'] . '  : thumbsDown ' . $row3['thumbsDown'] . '</p>';
             }
         ?>
     </div>
