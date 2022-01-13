@@ -47,7 +47,7 @@ $result2 = mysqli_query($conn, $query);
     <div>
         <?php
             while($row2=mysqli_fetch_array($result2)) {
-                echo '<p>' . $row['IDmbr'] . ' : ' . $row['lastName'] . ' : ' . $row['firstName'] . '  : ' . $row['user'] . '</p>';
+                echo '<p>' . $row2['IDmbr'] . ' : ' . $row2['lastName'] . ' : ' . $row2['firstName'] . '  : ' . $row2['user'] . '</p>';
             }
         ?>
     </div>
